@@ -1,6 +1,7 @@
 const arguments = [
   '--require-module @babel/register',
-  'e2e/features/*/*.feature'
+  'e2e/features/*/*.feature',
+  '--publish-quiet'
 ].join(' ');
 
 module.exports = {

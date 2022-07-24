@@ -11,10 +11,12 @@ module.exports = {
     "android.emu.debug": {
       "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
       "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
-      "type": "android.emulator",
+      "type": "android.attached",
       "device": {
-        "avdName": "Pixel_2_API_29",
+          "adbName": "emulator-5554"
       }
     }
   }
 }
+
+
