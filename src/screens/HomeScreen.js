@@ -9,26 +9,31 @@ const HomeScreen = ({ navigation }) => {
           text="Counters"
           background="#B2FADE"
           navigationScreen={(onPress = () => navigation.navigate('Counters'))}
+          sectionTextId="counters"
         />
         <HomeComponents
           text="Member List"
           background="#FAB7B2"
           navigationScreen={(onPress = () => navigation.navigate('Members'))}
+          sectionTextId="members"
         />
         <HomeComponents
           text="Cities"
           background="#D6FAB2"
           navigationScreen={(onPress = () => navigation.navigate('Images'))}
+          sectionTextId="cities"
         />
         <HomeComponents
           text="Animation"
           background="#769FFF"
           navigationScreen={(onPress = () => navigation.navigate('Animation'))}
+          sectionTextId="animation"
         />
         <HomeComponents
           text="Extras"
           background="#FFEB57"
           navigationScreen={(onPress = () => navigation.navigate('Extras'))}
+          sectionTextId="extras"
         />
     </SafeAreaView>
   );

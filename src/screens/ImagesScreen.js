@@ -7,9 +7,9 @@ const ImagesScreen = () => {
   return (
     <SafeAreaView style={{marginBottom: 50}}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <ImageComponents title="Europe" />
-        <ImageComponents title="USA / Canada" />
-        <ImageComponents title="Asia" />
+        <ImageComponents title="Europe" listTestId="europe"/>
+        <ImageComponents title="USA / Canada" listTestId="usa/canada"/>
+        <ImageComponents title="Asia" listTestId="asia"/>
       </ScrollView>
     </SafeAreaView>
   );
@@ -20,8 +20,9 @@ ImagesScreen.navigationOptions = {
   headerShown: true,
   headerTitleAlign: 'center',
   title: 'Cities',
-  tabBarIcon: <FontAwesome5 name="city" size={20} />,
+  tabBarIcon: <FontAwesome5 name="city" size={20} testID="citiesNavigationImage"/>,
   tabBarAccessibilityLabel: 'Cities',
+  tabBarTestID:'citiesNavigationSection'
 };
 
 export default ImagesScreen;
