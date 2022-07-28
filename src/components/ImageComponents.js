@@ -7,7 +7,7 @@ const ImageComponents = ({title, listTestId}) => {
     title === 'Europe' ? europe : title === 'Asia' ? asia : usacanada;
 
   return (
-    <ScrollView>
+    <ScrollView testID={`imageBackground-${listTestId}`}>
       <View style={styles.headerContainer}>
         <Text style={styles.headerText} testID={`continentLabel-${listTestId}`}>{title}</Text>
       </View>
