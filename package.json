@@ -41,6 +41,7 @@
     "@cucumber/cucumber": "^8.5.0",
     "@react-native-community/eslint-config": "3.0.1",
     "babel-jest": "27.1.0",
+    "chai": "^4.3.6",
     "detox": "19.5.1 || ^19.8.1",
     "eslint": "7.32.0",
     "jest": "27.1.0",

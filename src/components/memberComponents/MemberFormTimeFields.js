@@ -13,6 +13,7 @@ const MemberFormTimeFields = ({
   isFailingValidation,
   errorMessage,
   isInError,
+  formTestId
 }) => {
   const [time, setTime] = useState(inputValue || '');
   const [show, setShow] = useState(false);
@@ -49,6 +50,7 @@ const MemberFormTimeFields = ({
           isFailingValidation={isFailingValidation}
           errorMessage={errorMessage}
           isInError={isInError}
+          formTestId={formTestId}
         />
       </TouchableOpacity>
       {show && (
@@ -57,8 +59,9 @@ const MemberFormTimeFields = ({
             value={new Date(lastTime)}
             mode="time"
             is24Hour={true}
-            display="spinner"
+            display="default"
             onChange={onChange}
+            testID="formTimePicker"
           />
           {Platform.OS === 'ios' && (
             <View>
@@ -66,11 +69,13 @@ const MemberFormTimeFields = ({
                 style={{margin: 5}}
                 title="Confirm"
                 onPress={() => onConfirm(lastTime)}
+                testID="confirmPickerButton"
               />
               <Button
                 style={{margin: 5, paddingBottom: 10}}
                 title="Cancel"
                 onPress={() => cancelChange()}
+                testID="cancelPickerButton"
               />
             </View>
           )}
