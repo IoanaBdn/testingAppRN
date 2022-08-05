@@ -81,7 +81,7 @@ const MemberListScreen = ({ navigation }) => {
       {data && data.length ? (
         renderList()
       ) : (
-        <Text>No Members added in the list</Text>
+        <Text testID='noResultsText'>No Members added on the list</Text>
       )}
     </SafeAreaView>
   );
