@@ -7,11 +7,12 @@ const ImageComponents = ({title, listTestId}) => {
     title === 'Europe' ? europe : title === 'Asia' ? asia : usacanada;
 
   return (
-    <ScrollView testID={`imageBackground-${listTestId}`}>
+    <ScrollView>
       <View style={styles.headerContainer}>
         <Text style={styles.headerText} testID={`continentLabel-${listTestId}`}>{title}</Text>
       </View>
-      <FlatList
+      <FlatList 
+        testID={`imageBackground-${listTestId}`}
         horizontal
         showsHorizontalScrollIndicator={false}
         keyExtractor={(city) => city.name}

@@ -106,7 +106,7 @@ class CitiesPage {
 
     // Dynamic objects
     continentBackground(continent) {
-        return element(by.id(`imageBackground-${continent}`));
+        return by.id(`imageBackground-${continent}`);
     }
     continentLabel(continent) {
         return element(by.id(`continentLabel-${continent}`));
@@ -139,15 +139,15 @@ class CitiesPage {
         await element(this.citiesBackground).swipe('down');
     }
 
-    async scrollCities(continent, direction, number) {
+    async scrollCities(continent, pixels, direction, number) {
         if (direction === 'right') {
             await utilities.scrollToElement(
                 this.cityImage(continent, 0),
                 this.citiesBackground,
                 100, 'down');
         }
-        await utilities.scrollHorizontallyToElement(
-            this.continentBackground(continent), direction, this.cityImage(continent, number));
+        await utilities.scrollToElement(
+            this.cityImage(continent, number), this.continentBackground(continent), pixels, direction);
         await expect(this.cityTitle(continent, number)).toBeVisible();
         await expect(this.cityImage(continent, number)).toBeVisible();
     }

@@ -12,21 +12,10 @@ class Utilities {
     }
 
     async scrollToElement(targetElement, background, pixels, direction) {
-        if (direction === 'left' || direction === 'right') {
-            await this.scrollHorizontallyToElement(element(background), direction, targetElement);
-        } else {
-            await waitFor(targetElement)
-                .toBeVisible()
-                .whileElement(background)
-                .scroll(pixels, direction);
-        }
-    }
-
-    async scrollHorizontallyToElement(background, direction, targetElement) {
-        while (await this.softElementAssertion(targetElement) === false) {
-            const scrollDirection = direction === 'left' ? 'right' : 'left';
-            await background.swipe(scrollDirection, 'slow', 0.3);
-        }
+        await waitFor(targetElement)
+            .toBeVisible()
+            .whileElement(background)
+            .scroll(pixels, direction, direction === 'left' ? 0.25 : NaN);
     }
 
     async selectCalendarDate(weekday, day, month, year) {
@@ -43,11 +32,11 @@ class Utilities {
             await element(by.id('formDatePicker')).setDatePickerDate(`${day}-${month}-${year}`,
                 'dd-MM-yyyy');
         } else {
-           await element(by.type('android.widget.EditText')).atIndex(2).typeText(year);
-           await element(by.type('android.widget.EditText')).atIndex(1).typeText(day);
-           await element(by.type('android.widget.EditText')).atIndex(0).tap();
-           await element(by.type('android.widget.EditText')).atIndex(0).clearText();
-           await element(by.type('android.widget.EditText')).atIndex(0).typeText(baseData.getMonth(month));
+            await element(by.type('android.widget.EditText')).atIndex(2).typeText(year);
+            await element(by.type('android.widget.EditText')).atIndex(1).typeText(day);
+            await element(by.type('android.widget.EditText')).atIndex(0).tap();
+            await element(by.type('android.widget.EditText')).atIndex(0).clearText();
+            await element(by.type('android.widget.EditText')).atIndex(0).typeText(baseData.getMonth(month));
         }
     }
 
@@ -64,7 +53,7 @@ class Utilities {
         }
     }
 
-    async setTime(hours, minutes ){
+    async setTime(hours, minutes) {
         if (device.getPlatform() === 'ios') {
             await element(by.id('formBackground')).swipe('up', 'fast', 0.5);
             await element(by.id('formTimePicker')).setDatePickerDate(`${hours}:${minutes}`, 'HH:mm');
