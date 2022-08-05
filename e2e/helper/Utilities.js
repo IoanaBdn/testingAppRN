@@ -25,7 +25,7 @@ class Utilities {
     async scrollHorizontallyToElement(background, direction, targetElement) {
         while (await this.softElementAssertion(targetElement) === false) {
             const scrollDirection = direction === 'left' ? 'right' : 'left';
-            await background.swipe(scrollDirection, 'slow', 0.5);
+            await background.swipe(scrollDirection, 'slow', 0.3);
         }
     }
 

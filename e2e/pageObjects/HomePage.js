@@ -17,6 +17,14 @@ class HomePage{
         return element(by.id('homeSectionText-extras'));
     }
 
+    async verifyHomePage(){
+        await expect(this.countersSection).toHaveText('Counters');
+        await expect(this.membersSection).toHaveText('Member List');
+        await expect(this.citiesSection).toHaveText('Cities');
+        await expect(this.animationSection).toHaveText('Animation');
+        await expect(this.extrasSection).toHaveText('Extras');
+    }
+
     async tapHomeSection(section){
         switch(section){
             case 'Counters':
