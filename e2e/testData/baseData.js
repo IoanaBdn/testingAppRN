@@ -9,7 +9,18 @@ class BaseData {
       case "2":
         return testData.getId_2();
       default:
-        assert.fail(`The entered ${memberNumber} is an invalid number`);
+        assert.fail(`The entered ${memberNumber} is an invalid number for Member ID`);
+    }
+  }
+
+  getEmail(memberNumber) {
+    switch (memberNumber) {
+      case "1":
+        return testData.getEmail_1();
+      case "2":
+        return testData.getEmail_2();
+      default:
+        assert.fail(`The entered ${memberNumber} is an invalid number form Member Email`);
     }
   }
 

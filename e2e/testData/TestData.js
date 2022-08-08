@@ -2,9 +2,11 @@ class TestData {
   constructor() {
     this.name_1;
     this.surname_1;
+    this.email_1;
     this.id_1;
     this.name_2;
     this.surname_2;
+    this.email_2;
     this.id_2;
     this.lastTag;
   }
@@ -21,6 +23,13 @@ class TestData {
   }
   setSurname_1(surname_1) {
     this.surname_1 = surname_1;
+  }
+
+  getEmail_1() {
+    return this.email_1;
+  }
+  setEmail_1(email_1) {
+    this.email_1 = email_1;
   }
 
   getId_1() {
@@ -42,6 +51,13 @@ class TestData {
   }
   setSurname_2(surname_2) {
     this.surname_2 = surname_2;
+  }
+
+  getEmail_2() {
+    return this.email_2;
+  }
+  setEmail_2(email_2) {
+    this.email_2 = email_2;
   }
 
   getId_2() {

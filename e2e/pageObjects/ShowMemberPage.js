@@ -112,7 +112,7 @@ class ShowMemberPage {
         await utilities.scrollToElement(this.memberPostcodeValue, this.showMemberBackground, 200, 'down');
 
         await expect(this.memberEmailLabel).toHaveText('Email');
-        await expect(this.memberEmailValue).toHaveText(formData.email);
+        await expect(this.memberEmailValue).toHaveText(baseData.getEmail(formData.member));
         await expect(this.memberAddressLineOneLabel).toHaveText('Address Line One');
         await expect(this.memberAddressLineOneValue).toHaveText(formData.address_one);
         await expect(this.memberAddressLineTwoLabel).toHaveText('Address Line Two');
@@ -121,8 +121,6 @@ class ShowMemberPage {
         await expect(this.memberCityValue).toHaveText(formData.city);
         await expect(this.memberPostcodeLabel).toHaveText('Postcode');
         await expect(this.memberPostcodeValue).toHaveText(formData.postcode);
-        await expect(this.memberEmailLabel).toHaveText('Email');
-        await expect(this.memberEmailValue).toHaveText(formData.email);
 
         await element(this.showMemberBackground).swipe('up');
 

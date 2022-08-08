@@ -153,7 +153,8 @@ class FormPage {
     await this.confirmPicker();
     await this.startDayLabel.tap();
     await this.selectPickerValue(this.startDayPicker, formData.start_day);
-    await utilities.typeInElement(this.emailInput, formData.email);
+    const email = this.generateRandomEmail(); 
+    await utilities.typeInElement(this.emailInput, email);
 
     await utilities.scrollToElement(
       this.postcodeInput,
@@ -194,7 +195,7 @@ class FormPage {
     await this.setTime(formData.start_hour, formData.start_minute);
     await this.confirmPicker();
 
-    await this.saveMemberData(formData.member, formData.name, formData.surname);
+    await this.saveMemberData(formData.member, formData.name, formData.surname, email);
   }
 
   // Support functions
@@ -317,19 +318,33 @@ class FormPage {
     }
   }
 
-  async saveMemberData(memberNumber, name, surname) {
+  async saveMemberData(memberNumber, name, surname, email) {
     switch (memberNumber) {
       case "1":
         testData.setName_1(name);
         testData.setSurname_1(surname);
+        testData.setEmail_1(email);
+
         break;
       case "2":
         testData.setName_2(name);
         testData.setSurname_2(surname);
+        testData.setEmail_2(email);
+
         break;
       default:
         assert.fail(`The entered ${memberNumber} is an invalid Member`);
     }
+  }
+
+  generateRandomEmail() {
+    const values = "123456789";
+    let email = "test_";
+    for (let i = 0; i <= 5; i++) {
+        email += values.charAt(Math.round(values.length * Math.random())); 
+    }
+    email += '@test.com';
+    return email;
   }
 }
 
