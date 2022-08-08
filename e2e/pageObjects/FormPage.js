@@ -1,5 +1,5 @@
 import utilities from '../helper/Utilities';
-import baseData from '../testData/baseData';
+import baseData from '../testData/BaseData';
 import testData from '../testData/TestData';
 import assert from 'chai';
 

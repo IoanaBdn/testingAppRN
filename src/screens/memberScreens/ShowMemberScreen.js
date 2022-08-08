@@ -14,10 +14,12 @@ import moment from 'moment';
 
 const ShowMemberScreen = ({ navigation }) => {
   const { data } = useContext(MemberContext);
+  console.log('ID in show screen', navigation.getParam('id'));
 
   const member = data.find((member) => member.id === navigation.getParam('id'));
+  console.log(member.startDate);
   return (
-    <ScrollView testID='showMemberBackground'>
+    <ScrollView testID="showMemberBackground">
       <SafeAreaView>
         <MemberFields labelText="ID" fieldValue={member.id} fieldTestId="id"/>
         <MemberFields labelText="Name" fieldValue={member.name} fieldTestId="name"/>
@@ -63,11 +65,11 @@ ShowMemberScreen.navigationOptions = ({ navigation }) => {
   const id = navigation.getParam('id');
 
   return {
-    headerTitle: ()=> <Text testID='showMemberHeader'>Member ${id}</Text>,
+    headerTitle: () => <Text testID="showMemberHeader">Member {id}</Text>,
     headerTitleAlign: 'center',
     headerRight: () => (
       <TouchableOpacity onPress={() => navigation.navigate('EditMember', {id})}>
-        <FontAwesome style={styles.editIcon} name="pencil" size={25} testID="editMemberIcon"/>
+        <FontAwesome style={styles.editIcon} name="pencil" size={25} testID="editMemberIcon" />
       </TouchableOpacity>
     ),
   };
