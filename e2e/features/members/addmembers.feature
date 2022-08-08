@@ -20,4 +20,4 @@ Feature: Add Member
         Examples:
             | name  | b_day | b_month | b_year | start_day | country | start_date | start_month | start_year | start_hour | start_minute | memberCount |
             | Ioana | 01    | 11      | 1995   | Friday    | Canada  | 26         | August      | 2022       | 19         | 35           | 1           |
-     
+            | Test  | 10    | 12      | 1995   | Wednesday | Andorra | 21         | September   | 2022       | 19         | 20           | 2           |
