@@ -24,6 +24,17 @@ class BaseData {
     }
   }
 
+  getStartDate(memberNumber) {
+    switch (memberNumber) {
+      case "1":
+        return testData.getStartDate_1();
+      case "2":
+        return testData.getStartDate_2();
+      default:
+        assert.fail(`The entered ${memberNumber} is an invalid number form Member Start Date`);
+    }
+  }
+
   getMonth(month) {
     switch (month) {
       case "01":

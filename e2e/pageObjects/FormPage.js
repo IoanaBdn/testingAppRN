@@ -2,6 +2,7 @@ import utilities from "../helper/Utilities";
 import baseData from "../testData/BaseData";
 import testData from "../testData/TestData";
 import assert from "chai";
+import moment from "moment";
 
 class FormPage {
   // Form headers
@@ -152,7 +153,9 @@ class FormPage {
     );
     await this.confirmPicker();
     await this.startDayLabel.tap();
-    await this.selectPickerValue(this.startDayPicker, formData.start_day);
+    const startDate = this.generateRandomDate();
+
+    await this.selectPickerValue(this.startDayPicker, moment(startDate).format('dddd').toString());
     const email = this.generateRandomEmail(); 
     await utilities.typeInElement(this.emailInput, email);
 
@@ -186,16 +189,16 @@ class FormPage {
     await element(this.formBackground).swipe("up", "fast", 0.25);
 
     await this.selectCalendarDate(
-      formData.start_day,
-      formData.start_date,
-      formData.start_month,
-      formData.start_year
+      moment(startDate).format('dddd'),
+      moment(startDate).format('D'),
+      moment(startDate).format('MMMM'),
+      moment(startDate).format('YYYY')
     );
     await this.startTimeLabel.tap();
     await this.setTime(formData.start_hour, formData.start_minute);
     await this.confirmPicker();
 
-    await this.saveMemberData(formData.member, formData.name, formData.surname, email);
+    await this.saveMemberData(formData.member, formData.name, formData.surname, email, startDate);
   }
 
   // Support functions
@@ -318,18 +321,22 @@ class FormPage {
     }
   }
 
-  async saveMemberData(memberNumber, name, surname, email) {
+  async saveMemberData(memberNumber, name, surname, email, startDate) {
     switch (memberNumber) {
       case "1":
         testData.setName_1(name);
         testData.setSurname_1(surname);
         testData.setEmail_1(email);
+        testData.setStartDate_1(startDate);
+
 
         break;
       case "2":
         testData.setName_2(name);
         testData.setSurname_2(surname);
         testData.setEmail_2(email);
+        testData.setStartDate_2(startDate);
+
 
         break;
       default:
@@ -345,6 +352,15 @@ class FormPage {
     }
     email += '@test.com';
     return email;
+  }
+
+  generateRandomDate(){
+    const randomDay = Math.floor(Math.random()*90);
+    let date = moment().add(randomDay, 'days');
+    if(moment(date).format('MMMM')==='March'){
+        date = moment(date).add(1, 'month');
+    }
+    return date;
   }
 }
 

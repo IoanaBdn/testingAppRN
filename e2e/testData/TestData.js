@@ -3,10 +3,12 @@ class TestData {
     this.name_1;
     this.surname_1;
     this.email_1;
+    this.startDate_1;
     this.id_1;
     this.name_2;
     this.surname_2;
     this.email_2;
+    this.startDate_2;
     this.id_2;
     this.lastTag;
   }
@@ -30,6 +32,13 @@ class TestData {
   }
   setEmail_1(email_1) {
     this.email_1 = email_1;
+  }
+
+  getStartDate_1() {
+    return this.startDate_1;
+  }
+  setStartDate_1(startDate_1) {
+    this.startDate_1 = startDate_1;
   }
 
   getId_1() {
@@ -58,6 +67,13 @@ class TestData {
   }
   setEmail_2(email_2) {
     this.email_2 = email_2;
+  }
+
+  getStartDate_2() {
+    return this.startDate_2;
+  }
+  setStartDate_2(startDate_2) {
+    this.startDate_2 = startDate_2;
   }
 
   getId_2() {
