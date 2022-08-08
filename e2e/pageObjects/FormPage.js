@@ -1,5 +1,7 @@
 import utilities from '../helper/Utilities';
 import baseData from '../testData/baseData';
+import testData from '../testData/TestData';
+import assert from 'chai';
 
 class FormPage {
     
@@ -172,6 +174,8 @@ class FormPage {
         await this.startTimeLabel.tap();
         await this.setTime(formData.start_hour, formData.start_minute);
         await this.confirmPicker();
+
+        await this.saveMemberData(formData.member, formData.name, formData.surname);
     }
 
     // Support functions
@@ -261,6 +265,17 @@ class FormPage {
             await element(by.text('CANCEL')).tap();
         }
     }
+
+    async saveMemberData(memberNumber, name, surname){
+        switch(memberNumber){
+            case '1':
+                testData.setName_1(name);
+                testData.setSurname_1(surname);
+                break;
+                default: assert.fail(`The entered ${memberNumber} is an invalid Member`);
+        }
+    }
+
 }
 
 export default new FormPage();

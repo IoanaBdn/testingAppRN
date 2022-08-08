@@ -43,6 +43,7 @@
     "babel-jest": "27.1.0",
     "chai": "^4.3.6",
     "detox": "19.5.1 || ^19.8.1",
+    "detox-getprops": "^0.1.2",
     "eslint": "7.32.0",
     "jest": "27.1.0",
     "metro-react-native-babel-preset": "0.66.2",
