@@ -18,6 +18,6 @@ Feature: Add Member
             | <name> | Test    | <b_day> | <b_month> | <b_year> | Test Address 1 | Test Address 2 | Test City | test1n   | <country> | <start_hour> | <start_minute> | <memberCount> |
 
         Examples:
-            | name | b_day | b_month | b_year | country | start_hour | start_minute | memberCount |
-            | Ioana | 01    | 11      | 1995   | Canada  | 19         | 35           | 1           |
-            | Test | 10    | 02      | 1991   | Andorra | 11         | 15           | 2           |
+            | name       | b_day | b_month | b_year | country | start_hour | start_minute | memberCount |
+            | TestName_1 | 01    | 11      | 1995   | Canada  | 19         | 35           | 1           |
+            | TestName_2 | 10    | 02      | 1991   | Andorra | 11         | 15           | 2           |

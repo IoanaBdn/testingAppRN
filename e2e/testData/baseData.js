@@ -1,5 +1,6 @@
 import assert from "chai";
 import testData from "./TestData";
+import configData from "./ConfigData";
 
 class BaseData {
   getId(memberNumber) {
@@ -86,6 +87,18 @@ class BaseData {
       default:
         assert.fail(`The entered ${month} is an invalid month`);
     }
+  }
+
+  getMemberInputName(name){
+    switch(name){
+      case 'TestName_1':
+        return configData.name_1;
+        case 'TestName_2':
+          return configData.name_2;
+          default:
+            return name;
+    }
+
   }
 
   getMonthNumber(month) {

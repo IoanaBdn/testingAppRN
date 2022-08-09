@@ -176,7 +176,8 @@ class FormPage {
     }
 
     async fillInForm(formData) {
-        await utilities.typeInElement(this.nameInput, formData.name);
+        const name = baseData.getMemberInputName(formData.name);
+        await utilities.typeInElement(this.nameInput, name);
         await utilities.typeInElement(this.surnameInput, formData.surname);
         await this.dateOfBirthLabel.tap();
         await this.selectDatePickerDate(formData.b_day, formData.b_month, formData.b_year);
@@ -216,7 +217,7 @@ class FormPage {
         await this.setTime(formData.start_hour, formData.start_minute);
         await this.confirmPicker();
 
-        this.saveMemberData(formData.member, formData.name, formData.surname, email, startDate);
+        this.saveMemberData(formData.member, name, formData.surname, email, startDate);
     }
 
     // Support functions

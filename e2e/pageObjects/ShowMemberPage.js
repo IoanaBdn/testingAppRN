@@ -103,7 +103,7 @@ class ShowMemberPage {
       baseData.getId(formData.member)
     );
     await expect(this.memberNameLabel).toHaveText("Name");
-    await expect(this.memberNameValue).toHaveText(formData.name);
+    await expect(this.memberNameValue).toHaveText(baseData.getMemberInputName(formData.name));
     await expect(this.memberSurnameLabel).toHaveText("Surname");
     await expect(this.memberSurnameValue).toHaveText(formData.surname);
     await expect(this.memberDateOfBirthLabel).toHaveText("Date of Birth");
