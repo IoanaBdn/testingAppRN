@@ -14,6 +14,6 @@ Feature: Counters works correctly when tapping on them
     @counters @functionality
     Scenario: Verify that tapping the Counters a number of times will reflect the correct number
         When I tap the 'Water' Counter 3 times
-        And I tap the 'Electricity' Counter 5 times
+        And I tap the 'Electricit' Counter 5 times
         And I tap the 'Gas' Counter 2 times
         Then I tap the 'Broadband' Counter 4 times
