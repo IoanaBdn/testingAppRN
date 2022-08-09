@@ -9,6 +9,9 @@ class FormPage {
   get addMemberHeader() {
     return element(by.id("addMemberHeader"));
   }
+  get editMemberHeader() {
+    return element(by.id("editMemberHeader"));
+  }
 
   // Form fields
   get formBackground() {

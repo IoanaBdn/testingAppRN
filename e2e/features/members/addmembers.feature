@@ -6,7 +6,7 @@ Feature: Add Member
         Given I tap on the 'Members' navigation tab section
         And I tap the Add Member icon
 
-    @members @addmembers @test
+    @members @addmembers
     Scenario Outline: I verify that members can be added through the add member form
         When I fill in the form with:
             | name   | surname | b_day   | b_month   | b_year   | address_one    | address_two    | city      | postcode | country   | start_hour   | start_minute   | member        |
