@@ -11,9 +11,14 @@ Before(async (testCase) => {
   let instanceBoolean = true;
   for (let i = 0; i < testCase.pickle.tags.length; i++) {
     let tag = testCase.pickle.tags[i].name;
-    if (tag === "@addmembers" || testData.getLastTag() === "@addmembers") {
+    if (
+      (tag === "@addmembers" ||
+      testData.getLastTag() === "@addmembers") ||
+      (tag === "@editmembers" ||
+      testData.getLastTag() === "@editmembers")
+    ) {
       instanceBoolean = false;
-    }else if(tag === '@addmembers'){
+    } else if ((tag === "@addmembers" )|| (tag === "@editmembers")) {
       testData.settLastTag(tag);
     }
   }
