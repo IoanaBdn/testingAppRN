@@ -13,6 +13,28 @@ class BaseData {
     }
   }
 
+  getName(memberNumber) {
+    switch (memberNumber) {
+      case "1":
+        return testData.getName_1();
+      case "2":
+        return testData.getName_2();
+      default:
+        assert.fail(`The entered ${memberNumber} is an invalid number for Member Name`);
+    }
+  }
+
+  getSurname(memberNumber) {
+    switch (memberNumber) {
+      case "1":
+        return testData.getSurname_1();
+      case "2":
+        return testData.getSurname_2();
+      default:
+        assert.fail(`The entered ${memberNumber} is an invalid number for Member Surame`);
+    }
+  }
+
   getEmail(memberNumber) {
     switch (memberNumber) {
       case "1":

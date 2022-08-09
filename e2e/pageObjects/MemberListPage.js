@@ -1,6 +1,7 @@
 import { assert, expect as chaiExpect } from "chai";
 import testData from "../testData/TestData";
 import utilities from "../helper/Utilities";
+import baseData from "../testData/BaseData";
 
 class MemberListPage {
   get memberListHeader() {
@@ -43,6 +44,22 @@ class MemberListPage {
     return element(by.id(`member-${memberNumber - 1}`));
   }
 
+  memberDelete(memberNumber) {
+    return element(by.id(`memberDelete-${memberNumber}`));
+  }
+
+  get deleteModalText(){
+    return element(by.id('deleteModalText'));
+  }
+
+  get deleteModalYesButton(){
+    return element(by.id('deleteModalButton-Yes'));
+  }
+
+  get deleteModalNoButton(){
+    return element(by.id('deleteModalButton-No'));
+  }
+
   // Functions used in encapsulation
   async verifyMemberListPage(membersCount) {
     await expect(this.memberListHeader).toHaveText("Members");
@@ -80,6 +97,15 @@ class MemberListPage {
         );
     }
   }
+
+  async deleteMember(member){
+    await this.memberDelete(member-1).tap();
+    await expect(this.deleteModalText).toHaveText(`Are you sure you want to delete ${baseData.getName(member.toString())} ${baseData.getSurname(member.toString())}?`);
+    await expect(this.deleteModalYesButton).toHaveText('YES');
+    await expect(this.deleteModalNoButton).toHaveText('NO');
+    await this.deleteModalYesButton.tap();
+  }
+
 }
 
 export default new MemberListPage();

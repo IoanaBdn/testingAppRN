@@ -5,6 +5,11 @@ import showMemberPage from "../../pageObjects/ShowMemberPage";
 
 setDefaultTimeout(120 * 1000);
 
+//Delete Member steps
+When('I delete Member number {int}', async (member)=>{
+  await memberList.deleteMember(member);
+}); 
+
 // Edit Member steps
 Then("The Edit Member page is correctly displayed with:", async (formData) => {
   await formPage.verifyEditMemberPage(formData.hashes()[0]);

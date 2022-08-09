@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-export default ModalButton = ({ text, onPress }) => {
+export default ModalButton = ({ text, onPress, textTestId }) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>{text}</Text>
+        <Text style={styles.buttonText} testID={`deleteModalButton-${textTestId}`}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
