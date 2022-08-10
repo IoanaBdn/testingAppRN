@@ -245,6 +245,10 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
+  - react-native-config (1.4.6):
+    - react-native-config/App (= 1.4.6)
+  - react-native-config/App (1.4.6):
+    - React-Core
   - react-native-date-picker (4.0.0):
     - React-Core
   - react-native-maps (0.29.3):
@@ -371,6 +375,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-config (from `../node_modules/react-native-config`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
@@ -441,6 +446,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-config:
+    :path: "../node_modules/react-native-config"
   react-native-date-picker:
     :path: "../node_modules/react-native-date-picker"
   react-native-maps:
@@ -515,6 +522,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
+  react-native-config: 7cd105e71d903104e8919261480858940a6b9c0e
   react-native-date-picker: da6c4f85945a2c087c569c7ac52851819ed24218
   react-native-maps: 41d01d8e0afcebe32bec9eea3bd945adc1b18f7a
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057

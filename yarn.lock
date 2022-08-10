@@ -7600,6 +7600,11 @@ react-native-calendars@1.1266.0:
   optionalDependencies:
     moment "^2.24.0"
 
+react-native-config@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.4.6.tgz#2aefebf4d9cf02831e64bbc1307596bd212f6d42"
+  integrity sha512-cSLdOfva2IPCxh6HjHN1IDVW9ratAvNnnAUx6ar2Byvr8KQU7++ysdFYPaoNVuJURuYoAKgvjab8ZcnwGZIO6Q==
+
 react-native-date-picker@4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/react-native-date-picker/-/react-native-date-picker-4.0.0.tgz"
