@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -15,6 +16,7 @@ import EditMemberScreen from './src/screens/memberScreens/EditMemberScreen';
 import ExtrasScreen from './src/screens/ExtrasScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Config from 'react-native-config';
 
 const homeFlow = createStackNavigator({
   Home: HomeScreen,
@@ -53,6 +55,10 @@ const switchNavigator = createSwitchNavigator({
     membersFlow
   })
 });
+
+if(Config.ENV === 'detox'){
+  LogBox.ignoreAllLogs();
+}
 
 const App = createAppContainer(switchNavigator);
 
