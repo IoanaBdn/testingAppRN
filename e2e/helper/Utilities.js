@@ -1,5 +1,8 @@
-import baseData from '../testData/BaseData';
 import { getText } from 'detox-getprops';
+import { copyFile as _copyFile, createReadStream } from 'fs-extra';
+import tempfile from 'tempfile';
+import { promisify } from 'util'; 
+const copyFile = promisify(_copyFile);
 
 class Utilities {
 
@@ -57,6 +60,13 @@ class Utilities {
         } else {
             return await getText(mobileElement);
         }
+    }
+
+    async takeScreenshotStream(screenshotName) {
+        const imagePath = await device.takeScreenshot(screenshotName);
+        const persistedImagePath = tempfile('.png');
+        await copyFile(imagePath, persistedImagePath);
+        return createReadStream(persistedImagePath);
     }
 
 }

@@ -1,11 +1,22 @@
-import { BeforeAll, Before, After, AfterAll } from '@cucumber/cucumber';
+import { BeforeAll, Before, AfterStep, After, AfterAll } from '@cucumber/cucumber';
 import { init, beforeEach, afterEach, cleanup } from 'detox';
 import { detox as config } from '../../../package.json';
 import testData from '../../testData/TestData';
 import moment from 'moment';
+import utilities from '../../helper/Utilities';
+import { mkdirp } from 'fs-extra';
+import report from '../../helper/ReportGeneration';
+import replace from 'replace-in-file';
+
 const date = moment().format('DD-MM-YYY_HH-mm-ss_a');
 
+let executionStart;
+
 BeforeAll({ timeout: 60 * 1000 }, async () => {
+
+    executionStart= moment();
+    mkdirp('e2e/reports/');
+
     await init(config);
 });
 
@@ -31,21 +42,37 @@ Before(async (testCase) => {
 
 });
 
+
+AfterStep(async function (step) {
+    if (step.result.status !== 'FAILED') {
+        const stepName = step.pickleStep.text.replace(/\s+/g, '-');
+        await this.attach(await utilities.takeScreenshotStream(`${device.getPlatform()}_${stepName}_${date}`), 'image/png');
+    }
+});
+
+
+
 After(async (scenario) => {
     const testSummary = {
         fullName: scenario.pickle.name,
         status: scenario.result.status.toLowerCase()
     }
     
-    if (scenario.result.status === 'FAILED') {
-        const scenarioName = scenario.pickle.name.replace(/\s+/g, '-');
-        await device.takeScreenshot(`${device.getPlatform()}_${scenarioName}_${date}`);
-    }
 
     await afterEach(testSummary); 
 
 });
 
 AfterAll(async () => {
+    const deviceOS = device.getPlatform();
     await cleanup();
+    const executionEnd = moment();
+
+    const options = {
+        files: 'e2e/Gulpfile.js',
+        from: new RegExp('reporter.generate.*'),
+        to: `reporter.generate(${report.getReportValues(deviceOS, executionStart, executionEnd)})`
+    }
+    
+    await replace(options);
 });
