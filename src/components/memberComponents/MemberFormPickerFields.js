@@ -12,6 +12,7 @@ const MemberFormPickerFields = ({
   isFailingValidation,
   errorMessage,
   isInError,
+  formTestId
 }) => {
   const [chosenValue, setChosenValue] = useState(inputValue);
   const [show, setShow] = useState(false);
@@ -35,13 +36,16 @@ const MemberFormPickerFields = ({
           isFailingValidation={isFailingValidation}
           errorMessage={errorMessage}
           isInError={isInError}
+          formTestId={formTestId}
         />
       </TouchableOpacity>
       {show && (
         <View style={{flexDirection: 'column'}}>
           <Picker
             selectedValue={options[0]}
-            onValueChange={handlePickerChange}>
+            onValueChange={handlePickerChange}
+            testID={`formPicker-${formTestId}`}
+            >
             {options.map((item, index) => {
               return <Picker.Item label={item} value={item} key={index} />;
             })}

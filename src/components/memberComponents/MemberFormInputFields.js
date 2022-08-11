@@ -10,6 +10,7 @@ const MemberFormInputFields = ({
   isFailingValidation,
   errorMessage,
   isInError,
+  formTestId
 }) => {
   const [isErrorState, setIsErrorState] = useState(isInError);
 
@@ -32,7 +33,7 @@ const MemberFormInputFields = ({
 
   return (
     <View pointerEvents={editableStatus ? 'auto' : 'none'}>
-      <Text style={styles.label}>{labelAndPlaceholder}:</Text>
+      <Text style={styles.label} testID={`formLabel-${formTestId}`}>{labelAndPlaceholder}:</Text>
       <TextInput
         style={[styles.input, isErrorState ? styles.inputError : {}]}
         placeholder={labelAndPlaceholder}
@@ -42,6 +43,7 @@ const MemberFormInputFields = ({
         onFocus={handleFocus}
         onBlur={handleBlur}
         autoCorrect={false}
+        testID={`formInput-${formTestId}`}
       />
     </View>
   );

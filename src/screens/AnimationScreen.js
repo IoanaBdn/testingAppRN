@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   SafeAreaView,
   View,
@@ -6,7 +6,8 @@ import {
   Animated,
   Easing,
   Switch,
-} from 'react-native';
+} from "react-native";
+import Config from "react-native-config";
 
 const AnimationScreen = () => {
   const [rotateValue] = useState(new Animated.Value(0));
@@ -26,15 +27,17 @@ const AnimationScreen = () => {
   };
 
   const StartImageRotate = () => {
-    setIsAnimationStarted(true);
-    Animated.loop(
-      Animated.timing(rotateValue, {
-        toValue: 1,
-        duration: 3000,
-        easing: Easing.linear,
-        useNativeDriver: false,
-      }),
-    ).start();
+    if (Config.ENV !== "detox") {
+      setIsAnimationStarted(true);
+      Animated.loop(
+        Animated.timing(rotateValue, {
+          toValue: 1,
+          duration: 3000,
+          easing: Easing.linear,
+          useNativeDriver: false,
+        })
+      ).start();
+    }
   };
 
   const StopImageRotate = () => {
@@ -49,7 +52,7 @@ const AnimationScreen = () => {
 
   const RotateData = rotateValue.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
+    outputRange: ["0deg", "360deg"],
   });
 
   return (
@@ -58,15 +61,16 @@ const AnimationScreen = () => {
         <Animated.Image
           style={{
             height: 230,
-            transform: [{rotate: RotateData}],
+            transform: [{ rotate: RotateData }],
             width: 250,
           }}
-          source={require('../assets/star.png')}
+          source={require("../assets/star.png")}
         />
       </View>
 
       <View style={styles.container}>
         <Switch
+          testID="animationSwitch"
           style={styles.switch}
           onValueChange={toggleSwitch}
           value={isEnabled}
@@ -77,14 +81,14 @@ const AnimationScreen = () => {
 };
 
 AnimationScreen.navigationOptions = {
-  headerTitle: 'Animation',
-  headerTitleAlign: 'center',
+  headerTitle: "Animation",
+  headerTitleAlign: "center",
 };
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignSelf: 'center',
+    justifyContent: "center",
+    alignSelf: "center",
   },
   image: {
     height: 400,
@@ -92,8 +96,8 @@ const styles = StyleSheet.create({
   },
   switch: {
     width: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 

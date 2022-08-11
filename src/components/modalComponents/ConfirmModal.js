@@ -13,13 +13,13 @@ const ConfirmModal = ({ text, visible, onAccept, onDecline }) => {
       onRequestClose={() => {}}>
       <View style={styles.containerStyle}>
         <ModalSection>
-          <Text style={styles.textStyle}>{text}</Text>
+          <Text testID='deleteModalText' style={styles.textStyle}>{text}</Text>
         </ModalSection>
 
         <ModalSection>
           <View style={styles.buttonContainer}>
-            <ModalButton text="Yes" onPress={onAccept} />
-            <ModalButton text="No" onPress={onDecline} />
+            <ModalButton text="Yes" onPress={onAccept} textTestId="Yes"/>
+            <ModalButton text="No" onPress={onDecline} textTestId="No"/>
           </View>
         </ModalSection>
       </View>

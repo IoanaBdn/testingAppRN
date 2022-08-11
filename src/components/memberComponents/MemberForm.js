@@ -62,7 +62,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView testID='formBackground'>
       <SafeAreaView style={{margin: 5}}>
         <MemberFormInputFields
           labelAndPlaceholder="Name"
@@ -72,6 +72,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!name}
           errorMessage="Please enter a valid name"
           isInError={fieldsOnError.includes('name')}
+          formTestId="name"
         />
 
         <MemberFormInputFields
@@ -82,6 +83,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!surname}
           errorMessage="Please enter a valid surname"
           isInError={fieldsOnError.includes('surname')}
+          formTestId="surname"
         />
         <MemberFormDateFields
           labelAndPlaceholder="Date of Birth"
@@ -90,6 +92,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!dateOfBirth}
           errorMessage="Please enter a valid date of birth"
           isInError={fieldsOnError.includes('dateOfBirth') && !dateOfBirth}
+          formTestId="dateOfBirth"
         />
         <MemberFormPickerFields
           labelAndPlaceholder="Start Day"
@@ -99,6 +102,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!dateOfBirth}
           errorMessage="Please enter a valid start day"
           isInError={fieldsOnError.includes('startDay') && !startDay}
+          formTestId="startDay"
         />
         <MemberFormInputFields
           labelAndPlaceholder="Email"
@@ -108,6 +112,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!emailRegex.test(email)}
           errorMessage="Please enter a valid email"
           isInError={fieldsOnError.includes('email')}
+          formTestId="email"
         />
         <MemberFormInputFields
           labelAndPlaceholder="Address Line One"
@@ -119,6 +124,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!addressLineOne}
           errorMessage="Address line one is required"
           isInError={fieldsOnError.includes('addressLineOne')}
+          formTestId="addressLineOne"
         />
         <MemberFormInputFields
           labelAndPlaceholder="Address Line Two"
@@ -127,6 +133,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
             setAddressLineTwo(addressLineTwo)
           }
           editableStatus={true}
+          formTestId="addressLineTwo"
         />
         <MemberFormInputFields
           labelAndPlaceholder="City"
@@ -136,6 +143,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!city}
           errorMessage="City is required"
           isInError={fieldsOnError.includes('city')}
+          formTestId="city"
         />
         <MemberFormInputFields
           labelAndPlaceholder="Postcode"
@@ -145,6 +153,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!postcode}
           errorMessage="Postcode is required"
           isInError={fieldsOnError.includes('postcode')}
+          formTestId="postcode"
         />
         <MemberFormPickerFields
           labelAndPlaceholder="Country"
@@ -154,6 +163,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!country}
           errorMessage="Country is required"
           isInError={fieldsOnError.includes('country') && !country}
+          formTestId='country'
         />
         <MemberFormCalendarFields
           labelAndPlaceholder="Start Date"
@@ -162,6 +172,7 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!startDate}
           errorMessage="Start date is required"
           isInError={fieldsOnError.includes('startDate') && !startDate}
+          formTestId="startDate"
         />
         <MemberFormTimeFields
           labelAndPlaceholder="Start Time"
@@ -171,9 +182,10 @@ const MemberForm = ({ onSubmit, initialValues}) => {
           isFailingValidation={!startTime}
           errorMessage="Start time is required"
           isInError={fieldsOnError.includes('startTime') && !startTime}
+          formTestId="startTime"
         />
 
-        <Button title="Save Member" onPress={handleSubmit} />
+        <Button title="Save Member" onPress={handleSubmit} testID="saveMemberButton"/>
       </SafeAreaView>
     </ScrollView>
   );

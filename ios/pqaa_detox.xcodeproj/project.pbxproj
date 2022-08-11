@@ -11,14 +11,13 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		60567D42A5F77928D92927E8 /* libPods-pqaa_detox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C87C7A1B21B00C8C7C75279B /* libPods-pqaa_detox.a */; };
+		81AA8DF826D05E8AFEEA701C /* libPods-pqaa_detox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E768679FC3AD79A05ED1595 /* libPods-pqaa_detox.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* pqaa_detoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pqaa_detoxTests.m; sourceTree = "<group>"; };
-		0ED2EC953EB9029616DFFDD7 /* Pods-pqaa_detox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox.release.xcconfig"; path = "Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* pqaa_detox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pqaa_detox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = pqaa_detox/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = pqaa_detox/AppDelegate.m; sourceTree = "<group>"; };
@@ -26,19 +25,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = pqaa_detox/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = pqaa_detox/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pqaa_detox/main.m; sourceTree = "<group>"; };
-		2AC9A42AFABB9792D87500C0 /* libPods-pqaa_detox-pqaa_detoxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pqaa_detox-pqaa_detoxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30A433484D19FD2F9111415E /* Pods-pqaa_detox-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-tvOSTests/Pods-pqaa_detox-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		3328ADC6DCFA8D29DE9C79DD /* libPods-pqaa_detox-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pqaa_detox-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CFCF31F4D2BF96F0FE942FC /* Pods-pqaa_detox-pqaa_detoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-pqaa_detoxTests.release.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-pqaa_detoxTests/Pods-pqaa_detox-pqaa_detoxTests.release.xcconfig"; sourceTree = "<group>"; };
-		78AB2550AF429241AA63339E /* Pods-pqaa_detox-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-tvOS.release.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-tvOS/Pods-pqaa_detox-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		9A0DA938ED36915BD1020D6A /* Pods-pqaa_detox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox.debug.xcconfig"; path = "Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox.debug.xcconfig"; sourceTree = "<group>"; };
-		9C844908D1026B4CE5FA5E76 /* Pods-pqaa_detox-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-tvOS/Pods-pqaa_detox-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A62195D591C4D09C92B6E002 /* Pods-pqaa_detox-pqaa_detoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-pqaa_detoxTests.debug.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-pqaa_detoxTests/Pods-pqaa_detox-pqaa_detoxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE04490782BD2671CA5C40B1 /* Pods-pqaa_detox-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-pqaa_detox-tvOSTests/Pods-pqaa_detox-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C4E02B4024229B2C7BB8E33C /* libPods-pqaa_detox-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pqaa_detox-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C87C7A1B21B00C8C7C75279B /* libPods-pqaa_detox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pqaa_detox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E768679FC3AD79A05ED1595 /* libPods-pqaa_detox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pqaa_detox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93F55A653C1D1C4B9FAE01C /* Pods-pqaa_detox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox.debug.xcconfig"; path = "Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F7F10A643D873003815C3B45 /* Pods-pqaa_detox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pqaa_detox.release.xcconfig"; path = "Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60567D42A5F77928D92927E8 /* libPods-pqaa_detox.a in Frameworks */,
+				81AA8DF826D05E8AFEEA701C /* libPods-pqaa_detox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,10 +80,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				C87C7A1B21B00C8C7C75279B /* libPods-pqaa_detox.a */,
-				2AC9A42AFABB9792D87500C0 /* libPods-pqaa_detox-pqaa_detoxTests.a */,
-				C4E02B4024229B2C7BB8E33C /* libPods-pqaa_detox-tvOS.a */,
-				3328ADC6DCFA8D29DE9C79DD /* libPods-pqaa_detox-tvOSTests.a */,
+				3E768679FC3AD79A05ED1595 /* libPods-pqaa_detox.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,14 +118,8 @@
 		EC62DB51AC3517F2976606D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9A0DA938ED36915BD1020D6A /* Pods-pqaa_detox.debug.xcconfig */,
-				0ED2EC953EB9029616DFFDD7 /* Pods-pqaa_detox.release.xcconfig */,
-				A62195D591C4D09C92B6E002 /* Pods-pqaa_detox-pqaa_detoxTests.debug.xcconfig */,
-				6CFCF31F4D2BF96F0FE942FC /* Pods-pqaa_detox-pqaa_detoxTests.release.xcconfig */,
-				9C844908D1026B4CE5FA5E76 /* Pods-pqaa_detox-tvOS.debug.xcconfig */,
-				78AB2550AF429241AA63339E /* Pods-pqaa_detox-tvOS.release.xcconfig */,
-				AE04490782BD2671CA5C40B1 /* Pods-pqaa_detox-tvOSTests.debug.xcconfig */,
-				30A433484D19FD2F9111415E /* Pods-pqaa_detox-tvOSTests.release.xcconfig */,
+				B93F55A653C1D1C4B9FAE01C /* Pods-pqaa_detox.debug.xcconfig */,
+				F7F10A643D873003815C3B45 /* Pods-pqaa_detox.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -149,14 +131,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "pqaa_detox" */;
 			buildPhases = (
-				E282ED72B7229E876FF914DA /* [CP] Check Pods Manifest.lock */,
+				7C974A6C0A48D2E42D965043 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				E8E8E7497EB40FD8D7C497B7 /* [CP] Copy Pods Resources */,
-				9C6867FADBEE5EA2B03CF4B9 /* [CP] Embed Pods Frameworks */,
+				D0C70084CDFC2C7481F48570 /* [CP] Embed Pods Frameworks */,
+				7A49EA8927A28B91B54861C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,47 +207,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		9C6867FADBEE5EA2B03CF4B9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E282ED72B7229E876FF914DA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-pqaa_detox-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8E8E7497EB40FD8D7C497B7 /* [CP] Copy Pods Resources */ = {
+		7A49EA8927A28B91B54861C3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,6 +255,46 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C974A6C0A48D2E42D965043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pqaa_detox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C70084CDFC2C7481F48570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pqaa_detox/Pods-pqaa_detox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -363,7 +345,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A0DA938ED36915BD1020D6A /* Pods-pqaa_detox.debug.xcconfig */;
+			baseConfigurationReference = B93F55A653C1D1C4B9FAE01C /* Pods-pqaa_detox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -391,7 +373,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ED2EC953EB9029616DFFDD7 /* Pods-pqaa_detox.release.xcconfig */;
+			baseConfigurationReference = F7F10A643D873003815C3B45 /* Pods-pqaa_detox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

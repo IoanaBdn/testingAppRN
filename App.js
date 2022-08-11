@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -15,6 +16,7 @@ import EditMemberScreen from './src/screens/memberScreens/EditMemberScreen';
 import ExtrasScreen from './src/screens/ExtrasScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Config from 'react-native-config';
 
 const homeFlow = createStackNavigator({
   Home: HomeScreen,
@@ -27,8 +29,9 @@ const homeFlow = createStackNavigator({
 
 homeFlow.navigationOptions = {
   title: 'Home',
-  tabBarIcon: <FontAwesome5 name="home" size={20} />,
-  tabBarAccessibilityLabel: 'Home'
+  tabBarIcon: <FontAwesome5 name="home" size={20} testID="homeNavigationImage"/>,
+  tabBarAccessibilityLabel: 'Home',
+  tabBarTestID: 'homeNavigationSection'
 }
 
 const membersFlow = createStackNavigator({
@@ -40,8 +43,9 @@ const membersFlow = createStackNavigator({
 
 membersFlow.navigationOptions = {
   title: 'Members',
-  tabBarIcon: <MaterialCommunityIcons name="wallet-membership" size={20} />,
-  tabBarAccessibilityLabel: 'Members'
+  tabBarIcon: <MaterialCommunityIcons name="wallet-membership" size={20} testID="membersNavigationImage"/>,
+  tabBarAccessibilityLabel: 'Members',
+  tabBarTestID: 'membersNavigationSection'
 }
 
 const switchNavigator = createSwitchNavigator({
@@ -51,6 +55,10 @@ const switchNavigator = createSwitchNavigator({
     membersFlow
   })
 });
+
+if(Config.ENV === 'detox'){
+  LogBox.ignoreAllLogs();
+}
 
 const App = createAppContainer(switchNavigator);
 

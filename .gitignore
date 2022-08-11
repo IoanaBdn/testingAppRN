@@ -1,3 +1,7 @@
+# E2E
+e2e/reports/
+e2e/.tmp
+
 # OSX
 #
 .DS_Store
@@ -57,3 +61,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+#Yarn
+yarn.lock
