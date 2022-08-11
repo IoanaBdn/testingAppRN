@@ -10,6 +10,14 @@
     "detox:e2e:ios-debug": "detox clean-framework-cache && detox build-framework-cache && DETOX_CONFIGURATION=ios.sim.debug DETOX_RECORD_VIDEOS='failing' DETOX_RECORD_LOGS='failing' npx cucumber-js",
     "detox:build:android-debug": "detox build --configuration android.emu.debug && mkdirp e2e/.tmp",
     "detox:e2e:android-debug": "DETOX_CONFIGURATION=android.emu.debug DETOX_RECORD_VIDEOS='failing' DETOX_RECORD_LOGS='failing' npx cucumber-js",
+
+
+    "detox:build:ios-release": "detox build --configuration ios.sim.release && mkdirp e2e/.tmp",
+    "detox:e2e:ios-release": "detox clean-framework-cache && detox build-framework-cache && DETOX_CONFIGURATION=ios.sim.release DETOX_RECORD_VIDEOS='failing' DETOX_RECORD_LOGS='failing' DETOX_CLEANUP=true npx cucumber-js",
+    "detox:build:android-release": "detox build --configuration android.emu.release && mkdirp e2e/.tmp",
+    "detox:e2e:android-release": "DETOX_CONFIGURATION=android.emu.release DETOX_RECORD_VIDEOS='failing' DETOX_RECORD_LOGS='failing' DETOX_CLEANUP=true npx cucumber-js",
+
+
     "detox:ios-report-generation": "cd e2e && DEVICE=\"iPhone 12 Pro\" OS=iOS VERSION=14.5 gulp report-generation && cd ..",
     "detox:android-report-generation": "cd e2e && DEVICE=\"Pixel XL\" OS=Android VERSION=10 gulp report-generation && cd ..",
     "detox:report-generation": "cd e2e && gulp report-generation && cd .."
