@@ -12,8 +12,8 @@ const date = moment().format('DD-MM-YYY_HH-mm-ss_a');
 
 let executionStart;
 
-BeforeAll({ timeout: 60 * 1000 }, async () => {
-
+BeforeAll({ timeout: 120 * 1000 }, async () => {
+    console.log("Execution start: ", moment(executionStart).format('HH:mm:ss'));
     executionStart= moment();
     mkdirp('e2e/reports/');
 
@@ -67,6 +67,7 @@ AfterAll(async () => {
     const deviceOS = device.getPlatform();
     await cleanup();
     const executionEnd = moment();
+    console.log("Execution end: ", moment(executionEnd).format('HH:mm:ss'));
 
     const options = {
         files: 'e2e/Gulpfile.js',

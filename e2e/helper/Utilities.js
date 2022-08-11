@@ -11,10 +11,10 @@ class Utilities {
     }
 
     async typeInElement(mobileElement, text) {
-        await device.disableSynchronization();
+        device.getPlatform() === 'ios' ? await device.disableSynchronization() : null;
         await mobileElement.replaceText(text);
         await mobileElement.tapReturnKey();
-        await device.enableSynchronization();
+        device.getPlatform() === 'ios' ? await device.enableSynchronization() : null;
     }
 
     async scrollToElement(targetElement, background, pixels, direction) {
