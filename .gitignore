@@ -1,4 +1,7 @@
-package-lock.json
+# E2E
+e2e/reports/
+e2e/.tmp
+
 # OSX
 #
 .DS_Store
